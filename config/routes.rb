@@ -1,4 +1,8 @@
 Smapper::Application.routes.draw do
+root :to => redirect("/attendees")
+  resources :attendees
+
+
   authenticated :user do
     root :to => 'home#index'
   end

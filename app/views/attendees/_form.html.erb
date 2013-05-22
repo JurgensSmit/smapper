@@ -1,0 +1,15 @@
+<%= form_for(@attendee, :html => {:multipart => true}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :twitter_handle %>
+    <%= f.input :bio %>
+    <%= f.input :address %>
+    <%= f.file_field :picture %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
